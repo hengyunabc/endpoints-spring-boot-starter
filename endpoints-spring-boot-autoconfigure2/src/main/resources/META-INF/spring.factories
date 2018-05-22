@@ -1,0 +1,6 @@
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  io.github.hengyunabc.endpoints.autoconfigure2.EndPointsEndPointAutoConfiguration
+
+org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration=\
+io.github.hengyunabc.endpoints.autoconfigure2.ManagementApplicationcontextHolderConfiguration

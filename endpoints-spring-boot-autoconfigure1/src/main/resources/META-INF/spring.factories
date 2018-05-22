@@ -1,0 +1,2 @@
+org.springframework.boot.actuate.autoconfigure.ManagementContextConfiguration=\
+io.github.hengyunabc.endpoints.autoconfigure1.EndPointsEndPointManagementContextConfiguration
