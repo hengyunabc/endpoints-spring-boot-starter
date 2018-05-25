@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>io.github.hengyunabc</groupId>
 		<artifactId>endpoints-spring-boot-starter-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 

@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>io.github.hengyunabc</groupId>
 		<artifactId>endpoints-spring-boot-starter-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -40,31 +40,4 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-invoker-plugin</artifactId>
-				<configuration>
-					<!-- <debug>true</debug> -->
-					<cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
-					<projectsDirectory>src/it</projectsDirectory>
-					<settingsFile>src/it/settings.xml</settingsFile>
-					<localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
-					<skipInvocation>${skipTests}</skipInvocation>
-					<streamLogs>true</streamLogs>
-					<preBuildHookScript>setup.bsh</preBuildHookScript>
-					<postBuildHookScript>verify.bsh</postBuildHookScript>
-				</configuration>
-				<executions>
-					<execution>
-						<id>integration-test</id>
-						<goals>
-							<goal>install</goal>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
