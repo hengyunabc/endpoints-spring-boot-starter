@@ -11,8 +11,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = EndpointsSpringBootStarterApplicationTests.Application.class, webEnvironment = WebEnvironment.RANDOM_PORT)
-public class EndpointsSpringBootStarterApplicationTests {
+@SpringBootTest(classes = EndpointsSpringBootStarterApplicationTest.Application.class, webEnvironment = WebEnvironment.RANDOM_PORT, properties = {
+		"management.security.enabled=false" })
+public class EndpointsSpringBootStarterApplicationTest {
 
 	@Value("${local.management.port}")
 	int managementPort;
@@ -27,9 +28,10 @@ public class EndpointsSpringBootStarterApplicationTests {
 		System.err.println("serverPort: " + serverPort);
 		System.err.println("managementPort: " + managementPort);
 
-		String mappings = restTemplate
-				.getForObject("http://localhost:" + managementPort + "actuator/endpoints/mappings", String.class);
-		Assertions.assertThat(mappings).contains("/actuator/endpoints/mappings");
+		System.in.read();
+		String mappings = restTemplate.getForObject("http://localhost:" + managementPort + "/endpoints/mappings",
+				String.class);
+		Assertions.assertThat(mappings).contains("/endpoints/mappings");
 	}
 
 	@SpringBootApplication
