@@ -14,6 +14,8 @@
 	<artifactId>endpoints-spring-boot-autoconfigure1</artifactId>
 	<packaging>jar</packaging>
 
+	<name>${project.artifactId}</name>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

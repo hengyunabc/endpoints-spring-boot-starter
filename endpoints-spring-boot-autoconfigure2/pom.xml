@@ -13,6 +13,7 @@
 
 	<artifactId>endpoints-spring-boot-autoconfigure2</artifactId>
 	<packaging>jar</packaging>
+	<name>${project.artifactId}</name>
 
 	<properties>
 		<spring-boot.version>${spring-boot2.version}</spring-boot.version>

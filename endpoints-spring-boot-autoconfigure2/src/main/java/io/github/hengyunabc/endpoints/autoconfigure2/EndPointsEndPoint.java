@@ -23,7 +23,7 @@ import org.springframework.web.servlet.handler.AbstractHandlerMethodMapping;
 
 /**
  *
- * @see org.springframework.boot.actuate.endpoint.RequestMappingEndpoint
+ * see org.springframework.boot.actuate.endpoint.RequestMappingEndpoint
  */
 @ControllerEndpoint(id = "endpoints")
 public class EndPointsEndPoint {

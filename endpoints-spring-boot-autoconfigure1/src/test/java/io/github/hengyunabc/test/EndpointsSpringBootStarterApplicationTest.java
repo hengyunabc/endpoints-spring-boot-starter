@@ -28,7 +28,6 @@ public class EndpointsSpringBootStarterApplicationTest {
 		System.err.println("serverPort: " + serverPort);
 		System.err.println("managementPort: " + managementPort);
 
-		System.in.read();
 		String mappings = restTemplate.getForObject("http://localhost:" + managementPort + "/endpoints/mappings",
 				String.class);
 		Assertions.assertThat(mappings).contains("/endpoints/mappings");

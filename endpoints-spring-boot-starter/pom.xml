@@ -14,6 +14,8 @@
 	<artifactId>endpoints-spring-boot-starter</artifactId>
 	<packaging>jar</packaging>
 
+	<name>${project.artifactId}</name>
+
 	<dependencies>
 		<dependency>
 			<groupId>io.github.hengyunabc</groupId>
