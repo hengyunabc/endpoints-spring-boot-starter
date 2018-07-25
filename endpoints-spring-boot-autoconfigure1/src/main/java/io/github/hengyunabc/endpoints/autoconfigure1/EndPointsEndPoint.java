@@ -24,7 +24,6 @@ import org.springframework.web.servlet.handler.AbstractUrlHandlerMapping;
 
 /**
  *
- * @author duanling 2017-07-13
  * @see org.springframework.boot.actuate.endpoint.RequestMappingEndpoint
  */
 @ConfigurationProperties("endpoints.endpoints")
